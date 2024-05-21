@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- ... seu código ... -->
+</head>
+<body>
+    <header class="app-bar">
+        <!-- ... seu código ... -->
+    </header>
+    <main>
+        <div id="historico"></div>
+    </main>
+    <script>
+        window.onload = function() {
+            var historico = document.getElementById('historico');
+            var entradaHistorico = localStorage.getItem('banhoHistorico');
+            if (entradaHistorico) {
+                var paragrafo = document.createElement('p');
+                paragrafo.textContent = entradaHistorico;
+                historico.appendChild(paragrafo);
+            }
+        };
+    </script>
+</body>
+</html>

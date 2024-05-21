@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryCare - Localização</title>
+    <link rel="stylesheet" href="pagina3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="banheiro.css">
+</head>
+<body>
+    <header class="app-bar">
+        <button class="menu-button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1><a href="pagina2.html" class="title-link">MemoryCare</a></h1>
+        <div class="menu-content">
+            <a href="#" class="menu-item">
+                <i class="fas fa-cog"></i> Configuração
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-bell"></i> Notificações
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-sticky-note"></i> Anotações
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="button-grid">
+            <a id="home-button" href="#" class="button">
+                <i class="fas fa-home"></i>
+                <span>Voltar para casa</span>
+            </a>
+            <a id="add-address-button" href="#" class="button">
+                <i class="fas fa-plus"></i>
+                <span>Adicionar um endereço</span>
+            </a>
+        </div>
+    </main>
+    
+    <script>
+        // Verifique se a Geolocalização é suportada
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                // Obtenha as coordenadas da localização atual
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+
+                // Atualize o link do botão "Voltar para casa" para incluir a localização atual
+                var homeButton = document.getElementById('home-button');
+                homeButton.href = 'https://www.google.com/maps/dir/?api=1&origin=' + lat + ',' + lon + '&destination=Rua+deputado+aureliano+chaves,+391,+itajuba,+minas+gerais';
+
+                // Atualize o link do botão "Adicionar um endereço" para incluir a localização atual e deixar o destino em branco
+                var addAddressButton = document.getElementById('add-address-button');
+                addAddressButton.href = 'https://www.google.com/maps/dir/?api=1&origin=' + lat + ',' + lon;
+            });
+        } else {
+            alert('Desculpe, a Geolocalização não é suportada pelo seu navegador.');
+        }
+    </script>
+</body>
+</html>
