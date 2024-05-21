@@ -29,27 +29,27 @@ document.addEventListener('DOMContentLoaded', function () {
     var buttons = document.querySelectorAll('.button');
 
     // Adiciona um ouvinte de evento 'click' a cada botão
-    buttons.forEach(function(button) {
-        button.addEventListener('click', function() {
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
             // Adiciona a classe 'button-selected'
             this.classList.add('button-selected');
         });
 
     });
 
-    window.onload = function() {
+    window.onload = function () {
         var banhoButton = document.getElementById('banhoButton');
         var escovarButton = document.getElementById('escovarButton');
         var urinarButton = document.getElementById('urinarButton');
         var adicionarButton = document.getElementById('adicionarButton');
-    
+
         var banhoAudio = new Audio('sound/banho.mp3');
         var escovarAudio = new Audio('sound/escovar.mp3');
         var urinarAudio = new Audio('sound/urinar.mp3');
         var adicionarAudio = new Audio('adicionar-sound.mp3');
-    
+
         var currentAudio = null;
-    
+
         function playAudio(audio) {
             if (currentAudio) {
                 currentAudio.pause();
@@ -57,20 +57,56 @@ document.addEventListener('DOMContentLoaded', function () {
             currentAudio = audio;
             audio.play();
         }
-    
-        banhoButton.addEventListener('click', function() {
+
+        banhoButton.addEventListener('click', function () {
             playAudio(banhoAudio);
         });
-    
-        escovarButton.addEventListener('click', function() {
+
+        escovarButton.addEventListener('click', function () {
             playAudio(escovarAudio);
         });
-    
-        urinarButton.addEventListener('click', function() {
+
+        urinarButton.addEventListener('click', function () {
             playAudio(urinarAudio);
         });
-    
-        adicionarButton.addEventListener('click', function() {
+
+        adicionarButton.addEventListener('click', function () {
         });
     }
+    window.onload = function () {
+        var alertaButton = document.getElementById('alertaButton');
+
+        var banhoAudio = new Audio('sound/banho.mp3');
+
+        var currentAudio = null;
+
+        function playAudio(audio) {
+            if (currentAudio) {
+                currentAudio.pause();
+            }
+            currentAudio = audio;
+            audio.play();
+        }
+
+        alertaButton.addEventListener('click', function () {
+            playAudio(banhoAudio);
+        });
+
+    }
+
+    window.onload = function() {
+        var samuButton = document.querySelector('.button i.fa-ambulance');
+    
+        samuButton.addEventListener('click', function() {
+            window.location.href = 'tel:192';
+        });
+    }
+
+
+
+
 });
+
+
+
+
