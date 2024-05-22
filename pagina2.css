@@ -120,5 +120,12 @@ main {
     border: 2px solid #9d9ea1;
 }
 
+.button img {
+    width: 90px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 100px;
+    object-fit: cover; /* Para manter a proporção da imagem */
+    margin-bottom: -30px; /* Espaçamento entre a imagem e o rótulo */
+}
+
 
 
