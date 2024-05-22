@@ -28,11 +28,11 @@
     </header>
     <main>
         <div class="button-grid">
-            <a id="home-button" href="#" class="button">
+            <a id="home-button" href="#" class="button" target="_blank">
                 <i class="fas fa-home"></i>
                 <span>Voltar para casa</span>
             </a>
-            <a id="add-address-button" href="#" class="button">
+            <a id="add-address-button" href="#" class="button" target="_blank">
                 <i class="fas fa-plus"></i>
                 <span>Adicionar um endereço</span>
             </a>
@@ -40,10 +40,9 @@
     </main>
     
     <script>
-        // Verifique se a Geolocalização é suportada
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                // Obtenha as coordenadas da localização atual
+
                 var lat = position.coords.latitude;
                 var lon = position.coords.longitude;
 
@@ -51,7 +50,6 @@
                 var homeButton = document.getElementById('home-button');
                 homeButton.href = 'https://www.google.com/maps/dir/?api=1&origin=' + lat + ',' + lon + '&destination=Rua+deputado+aureliano+chaves,+391,+itajuba,+minas+gerais';
 
-                // Atualize o link do botão "Adicionar um endereço" para incluir a localização atual e deixar o destino em branco
                 var addAddressButton = document.getElementById('add-address-button');
                 addAddressButton.href = 'https://www.google.com/maps/dir/?api=1&origin=' + lat + ',' + lon;
             });
