@@ -9,6 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     color: #333;
+    
 }
 
 .app-bar {
@@ -133,4 +134,10 @@ main {
 .button-selected {
     border: 2px solid #9d9ea1;
     background-color: #9cb1ee; /* Cor de fundo quando o botão está marcado */
+}
+
+.button:active {
+    background-color: rgb(250, 248, 248);
+    box-shadow: 0 3px #666;
+    transform: translateY(3px);
 }

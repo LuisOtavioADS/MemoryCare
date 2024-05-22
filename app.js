@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
     });
 
-    
+
 
     // Fecha o menu se clicar fora dele
     document.addEventListener('click', function (event) {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('button-selected');
         });
     });
-    
+
 
     var buttons = document.querySelectorAll('.button');
 
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var urinarButton = document.getElementById('urinarButton');
         var adicionarButton = document.getElementById('adicionarButton');
 
-        var banhoAudio = new Audio('sound/banho.mp3');
-        var escovarAudio = new Audio('sound/escovar.mp3');
-        var urinarAudio = new Audio('sound/urinar.mp3');
+        var banhoAudio = new Audio('sound/banhoh.mp3');
+        var escovarAudio = new Audio('sound/escovarh.mp3');
+        var urinarAudio = new Audio('sound/banheiroh.mp3');
         var adicionarAudio = new Audio('adicionar-sound.mp3');
 
         var currentAudio = null;
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuContent.style.display = menuContent.style.display === 'block' ? 'none' : 'block';
     });
 
-    
+
 
     // Fecha o menu se clicar fora dele
     document.addEventListener('click', function (event) {
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('button-selected');
         });
     });
-    
+
 
     var buttons = document.querySelectorAll('.button');
 
@@ -118,13 +118,13 @@ document.addEventListener('DOMContentLoaded', function () {
             // Adiciona a classe 'button-selected'
             this.classList.add('button-selected');
         });
-    
-        
+
+
 
     });
 
     const samuButton = document.getElementById('samuButton');
-    samuButton.addEventListener('click', function() {
+    samuButton.addEventListener('click', function () {
         window.location.href = 'tel:192';
     });
 });
